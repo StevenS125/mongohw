@@ -1,0 +1,27 @@
+{
+  "name": "mongohw",
+  "version": "1.0.0",
+  "description": "last homework for bootcamp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenS125/mongohw.git"
+  },
+  "author": "Steven Snyder",
+  "license": "ISC",
+    "dependencies": {
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.6",
+    "morgan": "^1.7.0",
+    "request": "^2.69.0"
+  },
+  "bugs": {
+    "url": "https://github.com/StevenS125/mongohw/issues"
+  },
+  "homepage": "https://github.com/StevenS125/mongohw#readme"
+}
