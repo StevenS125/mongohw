@@ -14,7 +14,6 @@ $(document).on("click", "p", function() {
   $("#notes").empty();
   // Save the id from the p tag
   var thisId = $(this).attr("data-id");
-  var thatId = $(this).attr("smoke-id");
 
   // Now make an ajax call for the Article
   $.ajax({
@@ -33,7 +32,7 @@ $(document).on("click", "p", function() {
       // A button to submit a new note, with the id of the article saved to it
       $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
       // A button to delete your ntoes on the article and update the databse
-      $("#notes").append("<button smoke-id='" + data._id + "' id='deletenote'>Delete Note</button>");
+      $("#notes").append("<button delete-id='" + data._id + "' id='deletenote'>Delete Note</button>");
 
 
       // If there's a note in the article
@@ -78,17 +77,17 @@ $(document).on("click", "#savenote", function() {
 // When you click the deletenote button
 $(document).on("click", "#deletenote", function() {
   // Grab the id associated with the article from the submit button
-  var thisId = $(this).attr("smoke-id");
+  var thisId = $(this).attr("delete-id");
 
   // Run a POST request to change the note, using what's entered in the inputs
   $.ajax({
-    method: "POST",
+    method: "DELETE",
     url: "/articles/" + thisId,
     data: {
       // Value taken from title input
-      title: $("#titleinput").val(""),
+      title: "",
       // Value taken from note textarea
-      body: $("#bodyinput").val("")
+      body: ""
     }
   })
     // With that done
