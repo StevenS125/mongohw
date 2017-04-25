@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
     <style>
@@ -34,9 +36,44 @@
         height: 200px;
         font-size: 18px;
       }
+      #nav {
+    background: rgb(200, 54, 54);
+    background: rgba(200, 54, 54, 0.3);
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+}
+
+.nav-links {
+    display: block;
+    left: 70px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+}
+
+.link {
+    border-right: 1px solid #595959;
+    font-weight: 300;
+    letter-spacing: .04em;
+    line-height: 1;
+    margin: 0 .4em 0 0;
+    padding: 0 .3em 0 0;
+    color: white;
+}
     </style>
   </head>
   <body>
+<div id="nav">
+    <div class="nav-links">
+      Mongo Scraper
+        <a class="link" href="/home">HOME</a>
+        <a class="link" href="/mySchools">Save Articles</a>
+        <button type="button" id="getArticles" class="btn btn-success">Scrape new Articles</button>
+    </div>
+</div>
+
     <div id="wrapper">
       <h1>NY times Scraper</h1>
       <h2><i>Click the link to view the article</i></h2>
